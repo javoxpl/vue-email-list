@@ -5,7 +5,6 @@ const app = new Vue({
         loading: ''
     },
     methods: {
-
         getData() {
             this.emailList = [];
             for (let i = 0; i < 10; i++) {
@@ -37,6 +36,7 @@ const app = new Vue({
         },
         created() {
             this.loading = true;
-            this.getData();
+            setTimeout(this.getData, 2000)
         }
-    })
+    }
+ )
